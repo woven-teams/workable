@@ -117,8 +117,8 @@ module Workable
     end
 
     # query a specific candidate
-    def candidate(id)
-      @transform_to.apply(:candidate, get_request("/candidate/#{id}")['candidate'])
+    def candidates(id)
+      @transform_to.apply(:candidate, get_request("/candidates/#{id}")['candidate'])
     end
 
     # create new candidate for given job
