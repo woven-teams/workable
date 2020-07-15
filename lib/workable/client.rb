@@ -289,6 +289,8 @@ module Workable
         fail Errors::NotFound, JSON.parse(response.body)['error']
       when 422
         handle_response_422(response)
+      when 429
+        fail Errors::RateLimit, response.body
       when 503
         fail Errors::RequestToLong, response.body
       else

@@ -7,5 +7,6 @@ module Workable
     class NotFound             < WorkableError; end
     class AlreadyExists        < WorkableError; end
     class RequestToLong        < WorkableError; end
+    class RateLimit            < WorkableError; end
   end
 end
