@@ -238,9 +238,8 @@ module Workable
       end
     end
 
-    def create_subscription(subdomain:, target:, event:, args:)
+    def create_subscription(target:, event:, args:)
       body = {
-        subdomain: subdomain,
         target: target,
         event: event,
         args: args
