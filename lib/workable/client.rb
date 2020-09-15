@@ -248,6 +248,7 @@ module Workable
 
       post_request("subscriptions") do |request|
         request.body = body.to_json
+      end
     end
 
     private
