@@ -238,6 +238,18 @@ module Workable
       end
     end
 
+    def create_subscription(subdomain:, target:, event:, args:)
+      body = {
+        subdomain: subdomain,
+        target: target,
+        event: event,
+        args: args
+      }
+
+      post_request("subscriptions") do |request|
+        request.body = body.to_json
+    end
+
     private
 
     attr_reader :api_key, :subdomain
